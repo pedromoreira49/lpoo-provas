@@ -71,6 +71,11 @@ public class AlunoController {
       //Imprimindo coleção do tipo List
       System.out.println("Coleção do tipo List: " + alunos);
 
+      //Procurando aluno com id 5 em List
+      System.out.println("Localizar pelo id = 5");
+      AlunoModel alunoFind = alunos.stream().filter(c -> c.getId() == 5).findAny().orElse(null);
+      System.out.println(alunoFind);
+
       //Criando coleção do tipo Map
       Map<Integer, AlunoModel> alunosMap = new HashMap<>();
       alunosMap.put(alunoA.getId(), alunoA);
@@ -82,5 +87,15 @@ public class AlunoController {
 
       //Imprimindo coleção do tipo Map
       System.out.println("Coleção do tipo Map: " + alunosMap);
+
+      //Procurando aluno com id 5 em Map
+      System.out.println("Localizar pelo id = 5");
+      System.out.println(alunosMap.get(5));
+
+      //Colocando List em ordem decrescente
+      alunos.sort(Comparator.comparing(AlunoModel::getId).reversed());
+      System.out.println("Colocando lista de alunos na ordem decrescente");
+      System.out.println(alunos);
+
   }
 }
