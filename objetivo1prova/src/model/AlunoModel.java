@@ -2,7 +2,7 @@ package model;
 
 public class AlunoModel {
     private int id;
-    private int cpf;
+    private String cpf;
     private String nome;
     private String sobrenome;
     private String email;
@@ -12,7 +12,7 @@ public class AlunoModel {
         super();
     }
 
-    public AlunoModel(int id, int cpf, String nome, String sobrenome, String email){
+    public AlunoModel(int id, String cpf, String nome, String sobrenome, String email){
         super();
         this.id = id;
         this.cpf = cpf;
@@ -21,12 +21,19 @@ public class AlunoModel {
         this.email = email;
     }
 
+    public AlunoModel(int id, String nome, String sobrenome){
+        super();
+        this.id = id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
     //Create Getters
     public int getId(){
         return id;
     }
 
-    public int getCpf(){
+    public String getCpf(){
         return cpf;
     }
 
@@ -47,7 +54,7 @@ public class AlunoModel {
         this.id = id;
     }
 
-    public void setCpf(int cpf){
+    public void setCpf(String cpf){
         this.cpf = cpf;
     }
 
