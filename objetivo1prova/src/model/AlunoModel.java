@@ -42,5 +42,25 @@ public class AlunoModel {
         return email;
     }
 
+    //Create Setters
+    public void setId(int id){
+        this.id = id;
+    }
 
+    public void setCpf(int cpf){
+        this.cpf = cpf;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setSobrenome(String sobrenome){
+        this.sobrenome = sobrenome;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+    
 }
