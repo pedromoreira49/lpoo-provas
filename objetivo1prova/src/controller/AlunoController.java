@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.*;
+
 import model.AlunoModel;
 
 public class AlunoController {
@@ -56,5 +58,29 @@ public class AlunoController {
       System.out.println("Nome: " + alunoB.getNome());
       System.out.println("Sobrenome: " + alunoB.getSobrenome());
       System.out.println("Email: " + alunoB.getEmail());
+
+      //Criando coleção do tipo List
+      List<AlunoModel> alunos = new ArrayList<>();
+      alunos.add(alunoA);
+      alunos.add(alunoB);
+      alunos.add(alunoC);
+      alunos.add(alunoD);
+      alunos.add(alunoE);
+      alunos.add(alunoF);
+
+      //Imprimindo coleção do tipo List
+      System.out.println("Coleção do tipo List: " + alunos);
+
+      //Criando coleção do tipo Map
+      Map<Integer, AlunoModel> alunosMap = new HashMap<>();
+      alunosMap.put(alunoA.getId(), alunoA);
+      alunosMap.put(alunoB.getId(), alunoB);
+      alunosMap.put(alunoC.getId(), alunoC);
+      alunosMap.put(alunoD.getId(), alunoD);
+      alunosMap.put(alunoE.getId(), alunoE);
+      alunosMap.put(alunoF.getId(), alunoF);
+
+      //Imprimindo coleção do tipo Map
+      System.out.println("Coleção do tipo Map: " + alunosMap);
   }
 }
