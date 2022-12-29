@@ -74,7 +74,7 @@ public class PacienteDAO extends BaseDAO{
     }
 
     public static List<PacienteModel> selectPacienteNotPassword(){
-        final String sql = "SELECT nome, email, cpf FROM paciente ORDER BY nome";
+        final String sql = "SELECT nome, email, cpf FROM paciente WHERE status = 1 ORDER BY nome";
         try
                 (
                         Connection conn = getConnection();
