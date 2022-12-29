@@ -19,7 +19,7 @@ public class PacienteModel extends UsuarioModel{
 
     @Override
     public String toString() {
-        return "PacienteModel{" +
+        return "\nPacienteModel{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", senha='" + senha + '\'' +
